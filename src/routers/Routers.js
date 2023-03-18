@@ -10,7 +10,7 @@ import NotFound from "../pages/NotFound";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login/Login";
 import Reg from "../pages/Reg/Reg";
-
+import Payment from "../pages/Payment/Payment";
 
 const Routers = () => {
   return (
@@ -26,6 +26,7 @@ const Routers = () => {
       <Route path="/login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
       <Route path="/reg" element={<Reg />} />
+      <Route path="/payment" element={<Payment />} />
     </Routes>
   );
 };
