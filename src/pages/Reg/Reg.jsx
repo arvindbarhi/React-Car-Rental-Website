@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Reg.css";
 
@@ -23,7 +23,6 @@ const Reg = () => {
     };
     try {
       const response = await Registration(payload);
-      // console.log(response.data.success);
       if (response.data.success) {
         navigate("/login");
       }
@@ -125,22 +124,17 @@ const Reg = () => {
                       <ul>
                         <li>
                           <div>
-                            <span
-                              style={{ fontSize: "14px" }}
-                              className="linkColor"
+                            <Link
+                              to="/login"
+                              className=" d-flex align-items-center gap-1"
                             >
-                              Don&apos;t have an account?
-                            </span>
-                          </div>
-                        </li>
-                        <li>
-                          <div>
-                            <span
-                              style={{ fontSize: "14px" }}
-                              className="linkColor"
-                            >
-                              Enter password?
-                            </span>
+                              <span
+                                style={{ fontSize: "14px" }}
+                                className="linkColor"
+                              >
+                                Already have an account?
+                              </span>
+                            </Link>
                           </div>
                         </li>
                       </ul>

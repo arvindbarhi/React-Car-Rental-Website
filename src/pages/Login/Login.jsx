@@ -1,5 +1,42 @@
+import axios from "axios";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
+
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [passowrd, setPassowrd] = useState("");
+  let submit = async (e) => {
+    e.preventDefault();
+    let payload = {
+      email: email,
+      password: passowrd,
+    };
+    try {
+      const response = await LoginUser(payload);
+
+      localStorage.setItem("token", JSON.stringify(response.data.data.Token));
+      console.log(response.data.success);
+      if (response.data.success == true) {
+        window.location.href = "http://localhost:3000/home";
+      }
+    } catch (err) {
+      alert("user not found with email or invalid password");
+    }
+  };
+
+  const userBaseUrl = "http://localhost:3003/api";
+  const userAxios = axios.create({
+    baseURL: userBaseUrl,
+    headers: {
+      "Content-type": "application/json",
+    },
+  });
+
+  const LoginUser = (payload) => {
+    return userAxios.post("/user/login", payload);
+  };
+
   return (
     <>
       <div className="container">
@@ -29,6 +66,7 @@ const Login = () => {
                             required={true}
                             type="email"
                             tabIndex={2}
+                            onChange={(e) => setEmail(e.target.value)}
                           />
                         </div>
 
@@ -38,18 +76,11 @@ const Login = () => {
                             placeholder="Password"
                             required={true}
                             tabIndex={3}
+                            onChange={(e) => setPassowrd(e.target.value)}
                           />
                         </div>
 
-                        <div className="mt-1">
-                          <input id="show_confirm_pass" type="checkbox" />
-
-                          <label className="smallP" htmlFor="show_confirm_pass">
-                            &nbsp; Show Password
-                          </label>
-                        </div>
-
-                        <button className="btn registerButton" type="submit">
+                        <button onClick={submit} className="btn registerButton">
                           Login
                         </button>
                       </div>
@@ -59,22 +90,17 @@ const Login = () => {
                       <ul>
                         <li>
                           <div>
-                            <span
-                              style={{ fontSize: "14px" }}
-                              className="linkColor"
+                            <Link
+                              to="/reg"
+                              className=" d-flex align-items-center gap-1"
                             >
-                              Don&apos;t have an account?
-                            </span>
-                          </div>
-                        </li>
-                        <li>
-                          <div>
-                            <span
-                              style={{ fontSize: "14px" }}
-                              className="linkColor"
-                            >
-                              Forgot password?
-                            </span>
+                              <span
+                                style={{ fontSize: "14px" }}
+                                className="linkColor"
+                              >
+                                Don&apos;t have an account?
+                              </span>
+                            </Link>
                           </div>
                         </li>
                       </ul>
