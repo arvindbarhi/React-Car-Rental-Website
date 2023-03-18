@@ -1,16 +1,16 @@
 .footer {
-  background: #000d6b;
+  background: #b76808;
   padding-top: 50px;
   padding-bottom: 15px;
 }
 
 .footer__logo i {
-  color: #fff;
+  color: #131111;
   font-weight: 400;
 }
 
 .footer__logo span {
-  color: #fff;
+  color: #0d0d0f;
   font-weight: 500;
 }
 

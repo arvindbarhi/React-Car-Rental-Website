@@ -42,17 +42,15 @@ const Testimonial = () => {
     <Slider {...settings}>
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
+        Flattered with availability of well maintained cars
+       Best service
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
           <img src={ava01} alt="" className="w-25 h-25 rounded-2" />
 
           <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
+            <h6 className="mb-0 mt-3">Dip Mondal</h6>
             <p className="section__description">Customer</p>
           </div>
         </div>
@@ -60,17 +58,14 @@ const Testimonial = () => {
 
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
+        Booked a XUV with unlimited kms, very happy with LIMO's service
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
           <img src={ava02} alt="" className="w-25 h-25 rounded-2" />
 
           <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
+            <h6 className="mb-0 mt-3">Disha Roy</h6>
             <p className="section__description">Customer</p>
           </div>
         </div>
@@ -78,17 +73,14 @@ const Testimonial = () => {
 
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
+        Booked a car for a family trip which was very comfortable and in great condition
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
           <img src={ava03} alt="" className="w-25 h-25 rounded-2" />
 
           <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
+            <h6 className="mb-0 mt-3">Desh Sing Chadda</h6>
             <p className="section__description">Customer</p>
           </div>
         </div>
@@ -96,17 +88,14 @@ const Testimonial = () => {
 
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
+        Most trustable car rental. Looking forward to using LIMO again
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
           <img src={ava04} alt="" className="w-25 h-25 rounded-2" />
 
           <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
+            <h6 className="mb-0 mt-3">SCOUT</h6>
             <p className="section__description">Customer</p>
           </div>
         </div>

@@ -32,27 +32,18 @@ const About = () => {
                 </h2>
 
                 <p className="section__description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Eveniet veniam assumenda aperiam accusantium ex autem
-                  perferendis repellendus nostrum delectus. Nemo et dolore est
-                  tempore rem minima adipisci magni dolorum ipsam.
+                The perfect car for your next trip is just around the corner
                 </p>
 
-                <p className="section__description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Eveniet veniam assumenda aperiam accusantium ex autem
-                  perferendis repellendus nostrum delectus. Nemo et dolore est
-                  tempore rem minima adipisci magni dolorum ipsam.
-                </p>
-
+               
                 <div className=" d-flex align-items-center gap-3 mt-4">
                   <span className="fs-4">
                     <i class="ri-phone-line"></i>
                   </span>
 
                   <div>
-                    <h6 className="section__subtitle">Need Any Help?</h6>
-                    <h4>+00123456789</h4>
+                    <h6 className="section__subtitle">Contact Us</h6>
+                    <h4>+91 7894561230</h4>
                   </div>
                 </div>
               </div>

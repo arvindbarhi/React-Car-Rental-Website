@@ -8,14 +8,14 @@
 }
 
 .become__driver button {
-  background: #fff;
-  color: #000d6b;
+  background: #140404;
+  color: #6cabcf;
   font-weight: 600;
 }
 
 .become__driver-title {
   font-size: 2.8rem;
-  color: #fff;
+  color: #f1d8d8;
   line-height: 65px;
 }
 

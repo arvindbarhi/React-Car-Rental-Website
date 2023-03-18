@@ -55,12 +55,14 @@ const BlogDetails = () => {
                 <div className="single__comment d-flex gap-3">
                   <img src={commentImg} alt="" />
                   <div className="comment__content">
-                    <h6 className=" fw-bold">David Visa</h6>
+                    <h6 className=" fw-bold">Dip Mondal</h6>
                     <p className="section__description mb-0">14 July, 2022</p>
                     <p className="section__description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Eos nobis totam eius laborum molestias itaque minima
-                      distinctio, quae velit tempore!
+                    You probably know Exotic Car List for their website — an awesome resource for listing your exotic car and viewing others’ listings. It makes buying and selling exotic cars simple, with an easy to navigate website.
+
+But have you ever taken a few minutes to check out their blog? They cover almost any exotic car topic you would want to read about: upcoming auto shows, car news, car reviews, tips and advice, and more!
+
+From viewing exotic car listings to learning more about the industry, Exotic Car List is a great site to bookmark.
                     </p>
 
                     <span className="replay d-flex align-items-center gap-1">

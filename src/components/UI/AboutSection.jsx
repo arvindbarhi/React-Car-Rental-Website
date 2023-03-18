@@ -18,37 +18,31 @@ const AboutSection = ({ aboutClass }) => {
           <Col lg="6" md="6">
             <div className="about__section-content">
               <h4 className="section__subtitle">About Us</h4>
-              <h2 className="section__title">Welcome to car rent service</h2>
+              <h2 className="section__title">Welcome to LIMO</h2>
               <p className="section__description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Voluptatum blanditiis esse accusantium dignissimos labore
-                laborum. Veniam, corporis mollitia temporibus, in quaerat vero
-                deleniti amet dolorem repudiandae, pariatur nam dolore! Impedit
-                neque sit ad temporibus quam similique dolor ipsam praesentium
-                sunt.
+              LIMO is India’s largest marketplace for Supercars on rent. From short road trips to quick in-city drives for groceries, supply pick-up, food runs, we have the cheapest car rental options for all your needs! A hatchback for daily commute, a sedan for short trips, SUV for hills or a luxury car for a surprise.
               </p>
 
               <div className="about__section-item d-flex align-items-center">
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
-                  amet.
+                  <i class="ri-checkbox-circle-line"></i> TRUSTED
+
                 </p>
 
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
-                  amet.
+                  <i class="ri-checkbox-circle-line"></i> SAFEST
+                
                 </p>
               </div>
 
               <div className="about__section-item d-flex align-items-center">
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
-                  amet.
+                  <i class="ri-checkbox-circle-line"></i> LUXURIOUS
+                 
                 </p>
 
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Lorem ipsum dolor sit
-                  amet.
+                  <i class="ri-checkbox-circle-line"></i> AFFORDABLE       
                 </p>
               </div>
             </div>

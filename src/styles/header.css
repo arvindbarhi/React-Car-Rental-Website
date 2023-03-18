@@ -1,6 +1,6 @@
 .header__top {
   padding: 10px 0px;
-  background: #000d6b;
+  background: #02030b;
   color: #fff;
 }
 
@@ -30,12 +30,12 @@
 
 .header__top__right a {
   text-decoration: none;
-  color: #fff;
+  color: #e4d7d7;
   font-size: 0.9rem;
 }
 
 .header__top__right a:hover {
-  color: #fff;
+  color: #d8bcbc;
 }
 
 /* ============ header middle style =========== */
@@ -54,7 +54,7 @@
 
 .logo h1 a {
   text-decoration: none;
-  color: #000d6b;
+  color: #09100c;
   font-weight: 700;
 }
 
@@ -64,7 +64,7 @@
 
 .header__location span i {
   font-size: 2.2rem;
-  color: #000d6b;
+  color: #2e0dc2;
 }
 
 .header__location-content h4 {
@@ -78,7 +78,7 @@
 }
 
 .header__btn {
-  background: #000d6b !important;
+  background: #060707 !important;
   padding: 10px 20px;
   border: none;
   outline: none;
@@ -96,14 +96,14 @@
 }
 
 .header__btn a:hover {
-  color: #fff;
+  color: #040303;
 }
 
 /* ================ main navbar styles =========== */
 
 .main__navbar {
   padding: 15px 0px;
-  background: #000d6b;
+  background: #159acf;
 }
 
 .mobile__menu i {
@@ -123,7 +123,7 @@
 }
 
 .nav__item {
-  color: #fff;
+  color: #141010;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -133,19 +133,19 @@
 }
 
 .search__box {
-  border: 1px solid #7c8a972f;
+  border: 1px solid #d7dce20b;
   padding: 7px 12px;
   display: flex;
   align-items: center;
   border-radius: 50px;
-  background: #020a4de9;
+  background: #e9e9ede9;
 }
 
 .search__box input {
   background: transparent;
   border: none;
   outline: none;
-  color: #fff;
+  color: #0c0808;
   cursor: pointer;
 }
 
