@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { Container, Row, Col } from "reactstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "../../styles/header.css";
 
 const navLinks = [
@@ -29,9 +29,22 @@ const navLinks = [
 ];
 
 const Header = () => {
+  const [token, setToken] = useState(null);
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    let token = localStorage.getItem("token");
+    setToken(token);
+  }, []);
+
   const menuRef = useRef(null);
 
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
+
+  let logout = () => {
+    localStorage.clear();
+    window.location.href = "http://localhost:3000/login";
+  };
 
   return (
     <header className="header">
@@ -50,9 +63,22 @@ const Header = () => {
 
             <Col lg="6" md="6" sm="6">
               <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
-                <Link to="/login" className=" d-flex align-items-center gap-1">
-                  <i class="ri-login-circle-line"></i> Login
-                </Link>
+                {token ? (
+                  <span
+                    style={{ cursor: "pointer" }}
+                    onClick={logout}
+                    className=" d-flex align-items-center gap-1"
+                  >
+                    Logout
+                  </span>
+                ) : (
+                  <Link
+                    to="/login"
+                    className=" d-flex align-items-center gap-1"
+                  >
+                    <i class="ri-login-circle-line"></i> Login
+                  </Link>
+                )}
 
                 <Link to="/reg" className=" d-flex align-items-center gap-1">
                   <i class="ri-user-line"></i> Register
