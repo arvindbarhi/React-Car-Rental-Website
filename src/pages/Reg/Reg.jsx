@@ -1,5 +1,51 @@
+import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 import "./Reg.css";
+
 const Reg = () => {
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [addres, setAddres] = useState("");
+  const [name, setName] = useState("");
+  const [passowrd, setPassowrd] = useState("");
+  const navigate = useNavigate();
+
+  let submit = async (e) => {
+    e.preventDefault();
+    let payload = {
+      name: name,
+      email: email,
+      mobile: mobile,
+      address: addres,
+      password: passowrd,
+    };
+    try {
+      const response = await Registration(payload);
+      // console.log(response.data.success);
+      if (response.data.success) {
+        navigate("/login");
+      }
+    } catch (err) {
+      console.log("Manish");
+    }
+  };
+
+  const userBaseUrl = "http://localhost:3003/api";
+  const userAxios = axios.create({
+    baseURL: userBaseUrl,
+    headers: {
+      "Content-type": "application/json",
+    },
+  });
+
+  const Registration = (payload) => {
+    return userAxios.post("/user/register", {
+      payload,
+    });
+  };
+
   return (
     <>
       <div className="container">
@@ -27,8 +73,9 @@ const Reg = () => {
                           <input
                             placeholder="Enter Your Name"
                             required={true}
-                            type="email"
+                            type="text"
                             tabIndex={2}
+                            onChange={(e) => setName(e.target.value)}
                           />
                         </div>
 
@@ -37,7 +84,7 @@ const Reg = () => {
                             type="text"
                             placeholder="Enter Email Address"
                             required={true}
-                            tabIndex={3}
+                            onChange={(e) => setEmail(e.target.value)}
                           />
                         </div>
 
@@ -46,17 +93,8 @@ const Reg = () => {
                             type="text"
                             placeholder="Enter Password"
                             required={true}
-                            tabIndex={3}
+                            onChange={(e) => setPassowrd(e.target.value)}
                           />
-                        </div>
-
-
-                        <div className="mt-1">
-                          <input id="show_confirm_pass" type="checkbox" />
-
-                          <label className="smallP" htmlFor="show_confirm_pass">
-                            &nbsp; Show Password
-                          </label>
                         </div>
 
                         <div className="inputFiled">
@@ -64,7 +102,7 @@ const Reg = () => {
                             type="text"
                             placeholder="Enter Mobile Number"
                             required={true}
-                            tabIndex={3}
+                            onChange={(e) => setMobile(e.target.value)}
                           />
                         </div>
 
@@ -73,11 +111,11 @@ const Reg = () => {
                             type="text"
                             placeholder="Enter Address"
                             required={true}
-                            tabIndex={3}
+                            onChange={(e) => setAddres(e.target.value)}
                           />
                         </div>
 
-                        <button className="btn registerButton" type="submit">
+                        <button onClick={submit} className="btn registerButton">
                           Register
                         </button>
                       </div>
